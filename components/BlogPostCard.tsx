@@ -12,13 +12,11 @@ import type { PostMetadata } from "@/lib/posts";
 
 interface BlogPostCardProps {
   post: PostMetadata;
-  index: number;
   linkToDetail?: boolean;
 }
 
 export default function BlogPostCard({
   post,
-  index,
   linkToDetail = false,
 }: BlogPostCardProps) {
   const cardContent = (

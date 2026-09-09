@@ -34,11 +34,10 @@ export default function BlogSection({
         <p className="text-muted-foreground">No posts match your search.</p>
       ) : (
         <div className="space-y-6">
-          {displayPosts.map((post, index) => (
+          {displayPosts.map((post) => (
             <BlogPostCard
               key={post.slug}
               post={post}
-              index={index}
               linkToDetail={linkToDetail}
             />
           ))}

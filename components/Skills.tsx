@@ -13,17 +13,17 @@ import {
 export default function Skills() {
   const skills = [
     { name: "Vim", icon: FiTerminal },
+    { name: "Linux", icon: FiTerminal },
     { name: "Java", icon: FiCoffee },
+    { name: "Python", icon: FiCode },
     { name: "Spring Boot", icon: FiLayers },
     { name: "JPA/Hibernate", icon: FiDatabase },
     { name: "Microservices", icon: FiServer },
     { name: "TypeScript", icon: FiCode },
     { name: "React", icon: FiCode },
     { name: "Next.js", icon: FiGlobe },
-    { name: "PostgreSQL", icon: FiDatabase },
-    { name: "Python", icon: FiCode },
     { name: "MySQL", icon: FiDatabase },
-    { name: "Linux", icon: FiTerminal },
+    { name: "PostgreSQL", icon: FiDatabase },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Skills() {
         Skills & Technologies
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {skills.map((skill, index) => (
+        {skills.map((skill) => (
           <div
             key={skill.name}
             className="flex flex-col items-center space-y-3 rounded-lg bg-card p-6 transition duration-200 hover:-translate-y-0.5 hover:bg-accent hover:shadow-sm motion-reduce:transform-none"

@@ -63,7 +63,7 @@ export default function ContactPage() {
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-center space-x-3">
                     <info.icon className="h-5 w-5 text-primary" />
                     <div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
+                  {socialLinks.map((social) => (
                     <a
                       key={social.name}
                       href={social.url}

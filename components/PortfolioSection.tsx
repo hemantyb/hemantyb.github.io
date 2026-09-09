@@ -25,11 +25,10 @@ export default function PortfolioSection({
         <p className="text-muted-foreground">No projects match your search.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayProjects.map((project, index) => (
+          {displayProjects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
-              index={index}
               onClick={onProjectClick}
             />
           ))}
