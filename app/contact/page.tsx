@@ -97,7 +97,7 @@ export default function ContactPage() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-muted-foreground transition-colors ${social.color}`}
+                      className={`rounded-full bg-gray-100 p-3 text-muted-foreground transition duration-200 hover:-translate-y-0.5 hover:shadow-sm motion-reduce:transform-none dark:bg-gray-800 ${social.color}`}
                     >
                       <social.icon className="h-5 w-5" />
                       <span className="sr-only">{social.name}</span>

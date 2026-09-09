@@ -51,7 +51,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
 
   return (
     <div
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl z-50 rounded-xl backdrop-blur-lg ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl z-50 rounded-xl backdrop-blur-lg transition-shadow duration-200 hover:shadow-xl ${
         darkMode ? "" : ""
       } shadow-lg border ${darkMode ? "" : ""}`}
     >
@@ -61,7 +61,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
             <h1 className="text-xl font-bold">
               <Link
                 href="/"
-                className="text-2xl font-bold hover:text-primary transition-colors"
+                className="text-2xl font-bold transition-colors duration-200 hover:text-primary"
               >
                 Hemant B.
               </Link>
@@ -72,7 +72,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full hover:bg-green-200 dark:hover:bg-gray-700"
+              className="rounded-full p-2 transition duration-200 hover:scale-105 hover:bg-green-200 dark:hover:bg-gray-700 motion-reduce:transform-none"
             >
               {darkMode ? (
                 <FiSun className="h-5 w-5" />
@@ -86,7 +86,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className={`hover:text-primary transition-colors flex items-center ${
+                      className={`flex items-center rounded-md px-2 py-1 transition duration-200 hover:scale-[1.02] hover:bg-accent hover:text-primary motion-reduce:transform-none ${
                         isActive(item.href) ? "text-primary font-semibold" : ""
                       }`}
                     >
@@ -103,7 +103,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="rounded-full p-2 transition duration-200 hover:scale-105 hover:bg-gray-200 dark:hover:bg-gray-700 motion-reduce:transform-none"
             >
               {darkMode ? (
                 <FiSun className="h-5 w-5" />
@@ -113,7 +113,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors"
+              className="inline-flex items-center justify-center rounded-lg p-2 transition duration-200 hover:scale-105 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 motion-reduce:transform-none"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
             >
@@ -140,7 +140,7 @@ const FloatingHeader = ({ darkMode, setDarkMode }: HeaderProps) => {
             <Link
               key={item.name}
               href={item.href}
-              className="px-4 py-3 rounded-lg text-base font-medium flex items-center transition-colors hover:text-primary"
+              className="flex items-center rounded-lg px-4 py-3 text-base font-medium transition duration-200 hover:translate-x-1 hover:bg-accent hover:text-primary motion-reduce:transform-none"
               onClick={() => setMobileMenuOpen(false)}
             >
               <item.icon className="w-5 h-5 mr-3" />

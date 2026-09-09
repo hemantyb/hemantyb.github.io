@@ -22,7 +22,7 @@ export default function BlogPostCard({
   linkToDetail = false,
 }: BlogPostCardProps) {
   const cardContent = (
-    <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+    <Card className="cursor-pointer h-full transition duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none">
       <CardHeader>
         <CardTitle>{post.title}</CardTitle>
       </CardHeader>

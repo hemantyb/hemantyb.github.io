@@ -23,7 +23,7 @@ export default function ProjectCard({
   return (
     <div>
       <Card
-        className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full"
+        className="cursor-pointer h-full transition duration-200 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 motion-reduce:transform-none"
         onClick={() => onClick(project)}
       >
         {/* <motion.div */}
