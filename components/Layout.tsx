@@ -17,9 +17,7 @@ export default function Layout({ children }: LayoutProps) {
   const { darkMode, setDarkMode } = useDarkMode();
 
   return (
-    <div
-      className={`min-h-screen transition-colors duration-300 ${darkMode ? "dark" : ""}`}
-    >
+    <div className="min-h-screen transition-colors duration-300">
       <FloatingHeader darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="container mx-auto px-4 py-8 mt-20 min-h-screen">
         <PageTransition>{children}</PageTransition>
