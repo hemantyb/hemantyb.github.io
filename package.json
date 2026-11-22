@@ -2,6 +2,7 @@
   "name": "hemant-baviskar-portfolio",
   "version": "0.1.4",
   "private": true,
+  "packageManager": "pnpm@12.21.0",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
