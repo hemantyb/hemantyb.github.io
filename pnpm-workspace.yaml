@@ -1,3 +1,9 @@
 allowBuilds:
   sharp: false
   unrs-resolver: false
+
+# These releases lint successfully with ESLint 10 but still declare ESLint 9 ranges.
+overrides:
+  "eslint-plugin-import@2.32.0>eslint:peer": "^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9 || ^10"
+  "eslint-plugin-jsx-a11y@6.10.2>eslint:peer": "^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9 || ^10"
+  "eslint-plugin-react@7.37.5>eslint:peer": "^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7 || ^10"
